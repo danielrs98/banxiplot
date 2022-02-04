@@ -1,3 +1,9 @@
+colores <- c("#182B47", "#BF0A33", "#00727C", "#FF7800", "#646567",
+             "#31B133", "#FFCB00", "#6D3A77", "#8C734A","#A6A6A6","#182B47",
+             "#652F6C")
+#Azul, Rojo, Verde, Naranja, Gris, Verde2, Amarillo, Morado, Oro, Gris_lineas
+#,negro,colorREF_morado
+
 #' Pie Plot
 #' @description The function "grafica_pie" create a Pie Plot
 #' @param df 	Default dataset to use for plot. If not already a data.frame, will be converted to one by fortify(). If not specified, must be supplied in each layer added to the plot.
