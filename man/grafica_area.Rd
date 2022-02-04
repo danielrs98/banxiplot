@@ -9,6 +9,9 @@ grafica_area(
   x_axis,
   y_axis,
   fill_C,
+  is_date = F,
+  is_num = F,
+  is_word = F,
   legend_position = "right",
   legend_title = "",
   x_t = "",
@@ -23,12 +26,40 @@ grafica_area(
   f_wrap = F,
   f_wrap_1,
   scales_fw = T,
-  t_hjust = 0,
-  s_hjust = 0,
+  t_hjust = 0.5,
+  s_hjust = 0.5,
   add_line = F,
   ext_line,
-  i = 2,
-  vline_col = "black"
+  ext_line_col = "black",
+  vline_col = "black",
+  size_t = 9,
+  size_s = 9,
+  size_x_t = 7,
+  size_y_t = 7,
+  size_l = 7,
+  size_lt = 7,
+  size_x_axis = 9,
+  size_y_axis = 9,
+  font_t = "Calibri",
+  font_s = "Calibri",
+  font_l = "Calibri",
+  font_x = "Calibri",
+  font_y = "Calibri",
+  font_lt = "Calibri",
+  col_t = colores[12],
+  col_s = colores[12],
+  angle_x = 0,
+  angle_y = 0,
+  x_axis_tf = "plain",
+  y_axis_tf = "plain",
+  x_axis_f = "plain",
+  y_axis_f = "plain",
+  area_alpha = 1,
+  vline_alpha = 1,
+  ext_line_alpha = 1,
+  escala = F,
+  ay,
+  by
 )
 }
 \arguments{
@@ -39,6 +70,12 @@ grafica_area(
 \item{y_axis}{variable to be plotted}
 
 \item{fill_C}{color fill}
+
+\item{is_date}{if x-axis format are dates}
+
+\item{is_num}{if x-axis format is numeric}
+
+\item{is_word}{if x-axis format are words}
 
 \item{legend_position}{Position adjustment of the legend}
 
@@ -76,9 +113,65 @@ grafica_area(
 
 \item{ext_line}{variable to be plotted}
 
-\item{i}{select a color}
+\item{ext_line_col}{select color of extra line}
 
 \item{vline_col}{color of vertical line}
+
+\item{size_t}{title font size}
+
+\item{size_s}{subtitle font size}
+
+\item{size_x_t}{x-axis title font size}
+
+\item{size_y_t}{y-axis title font size}
+
+\item{size_l}{legend title font size}
+
+\item{size_lt}{legend text font size}
+
+\item{size_x_axis}{x-axis text font size}
+
+\item{size_y_axis}{x-axis text font size}
+
+\item{font_t}{title font style}
+
+\item{font_s}{subtitle font style}
+
+\item{font_l}{legend font style}
+
+\item{font_x}{x-axis font style}
+
+\item{font_y}{y-axis font style}
+
+\item{font_lt}{legend text font style}
+
+\item{col_t}{title color}
+
+\item{col_s}{subtitle color}
+
+\item{angle_x}{angle of x-axis text}
+
+\item{angle_y}{angle of y-axis text}
+
+\item{x_axis_tf}{title bold,plain, etc}
+
+\item{y_axis_tf}{subtitle bold,plain, etc}
+
+\item{x_axis_f}{bold,plain, etc}
+
+\item{y_axis_f}{bold,plain, etc}
+
+\item{area_alpha}{area plot opacity}
+
+\item{vline_alpha}{vline opacity}
+
+\item{ext_line_alpha}{extra line opacity}
+
+\item{escala}{adjust y-axis scale}
+
+\item{ay}{y-axis scale lower limit}
+
+\item{by}{y-axis scale upper limit}
 }
 \value{
 An area plot with Banxico format

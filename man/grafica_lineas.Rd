@@ -9,6 +9,9 @@ grafica_lineas(
   x_axis,
   y_axis,
   fill_C,
+  is_date = F,
+  is_num = F,
+  is_word = F,
   size_line = 1.5,
   size_point = 2,
   legend_position = "right",
@@ -29,9 +32,43 @@ grafica_lineas(
   f_wrap_1,
   scales_fw = T,
   add_line = F,
-  i = 2,
   ext_line,
-  vline_col = "black"
+  vline_col = "black",
+  ext_line_col = "black",
+  size_t = 9,
+  size_s = 9,
+  size_x_t = 7,
+  size_y_t = 7,
+  size_l = 7,
+  size_lt = 7,
+  size_x_axis = 9,
+  size_y_axis = 9,
+  font_t = "Calibri",
+  font_s = "Calibri",
+  font_l = "Calibri",
+  font_x = "Calibri",
+  font_y = "Calibri",
+  font_lt = "Calibri",
+  col_t = colores[12],
+  col_s = colores[12],
+  angle_x = 0,
+  angle_y = 0,
+  x_axis_tf = "plain",
+  y_axis_tf = "plain",
+  x_axis_f = "plain",
+  y_axis_f = "plain",
+  line_alpha = 1,
+  vline_alpha = 1,
+  ext_line_alpha = 1,
+  add_text = F,
+  n_decimal = 2,
+  size_text = 3.5,
+  font_text = "plain",
+  textp_y = 0.04,
+  text_hjust = -0.25,
+  escala = F,
+  ay,
+  by
 )
 }
 \arguments{
@@ -42,6 +79,12 @@ grafica_lineas(
 \item{y_axis}{variable to be plotted}
 
 \item{fill_C}{color fill}
+
+\item{is_date}{if x-axis format are dates}
+
+\item{is_num}{if x-axis format is numeric}
+
+\item{is_word}{if x-axis format are words}
 
 \item{size_line}{line size, numeric value}
 
@@ -69,6 +112,8 @@ grafica_lineas(
 
 \item{s_hjust}{Subtitle position, values between [0,1]}
 
+\item{point}{If point = T, then add a point to the line graph}
+
 \item{line_v}{if line_v=T, then add a vertical line}
 
 \item{x_int}{Date where the vertical line will be placed}
@@ -81,13 +126,79 @@ grafica_lineas(
 
 \item{add_line}{If add_line = T then, add a line}
 
-\item{i}{select a color}
-
 \item{ext_line}{variable to be plotted}
 
 \item{vline_col}{color of vertical line}
 
-\item{point=F}{If point = T, then add a point to the line graph}
+\item{ext_line_col}{extra line color}
+
+\item{size_t}{title font size}
+
+\item{size_s}{subtitle font size}
+
+\item{size_x_t}{x-axis title font size}
+
+\item{size_y_t}{y-axis title font size}
+
+\item{size_l}{legend title font size}
+
+\item{size_lt}{legend text font size}
+
+\item{size_x_axis}{x-axis text font size}
+
+\item{size_y_axis}{x-axis text font size}
+
+\item{font_t}{title font style}
+
+\item{font_s}{subtitle font style}
+
+\item{font_l}{legend font style}
+
+\item{font_x}{x-axis font style}
+
+\item{font_y}{y-axis font style}
+
+\item{font_lt}{legend text font style}
+
+\item{col_t}{title color}
+
+\item{col_s}{subtitle color}
+
+\item{angle_x}{angle of x-axis text}
+
+\item{angle_y}{angle of y-axis text}
+
+\item{x_axis_tf}{title bold,plain, etc}
+
+\item{y_axis_tf}{subtitle bold,plain, etc}
+
+\item{x_axis_f}{bold,plain, etc}
+
+\item{y_axis_f}{bold,plain, etc}
+
+\item{line_alpha}{line plot opacity}
+
+\item{vline_alpha}{vline opacity}
+
+\item{ext_line_alpha}{extra line opacity}
+
+\item{add_text}{add text labels}
+
+\item{n_decimal}{number of decimals to graph}
+
+\item{size_text}{labels text font size}
+
+\item{font_text}{labels font size}
+
+\item{textp_y}{adjust text alignment}
+
+\item{text_hjust}{adjust text alignment, values in [0,1]}
+
+\item{escala}{adjust y-axis scale}
+
+\item{ay}{y-axis scale lower limit}
+
+\item{by}{y-axis scale upper limit}
 }
 \value{
 Line plot with Banxico format

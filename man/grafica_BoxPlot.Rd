@@ -8,7 +8,6 @@ grafica_BoxPlot(
   df,
   x_axis,
   y_axis,
-  group_c,
   color_bp = colores[2],
   color_outlier = "#FDFEFE",
   legend_position = "right",
@@ -16,16 +15,38 @@ grafica_BoxPlot(
   x_t = "",
   y_t = "",
   y_position = "right",
-  formato_fecha = "\%m-\%Y",
   titulo = "",
   subtitulo = "",
-  break_x = "8 week",
   t_hjust = 0,
   s_hjust = 0,
   f_wrap = F,
   f_wrap_1,
   scales_fw = T,
-  bigotes = F
+  bigotes = F,
+  prom = T,
+  size_t = 9,
+  size_s = 9,
+  size_x_t = 7,
+  size_y_t = 7,
+  size_l = 7,
+  size_lt = 7,
+  size_x_axis = 9,
+  size_y_axis = 9,
+  font_t = "Calibri",
+  font_s = "Calibri",
+  font_l = "Calibri",
+  font_x = "Calibri",
+  font_y = "Calibri",
+  font_lt = "Calibri",
+  col_t = colores[12],
+  col_s = colores[12],
+  angle_x = 0,
+  angle_y = 0,
+  x_axis_tf = "plain",
+  y_axis_tf = "plain",
+  x_axis_f = "plain",
+  y_axis_f = "plain",
+  box_alpha = 1
 )
 }
 \arguments{
@@ -34,8 +55,6 @@ grafica_BoxPlot(
 \item{x_axis}{data of variable x}
 
 \item{y_axis}{variable to be plotted}
-
-\item{group_c}{color fill}
 
 \item{color_bp}{color of the BoxPlot from colores Banxico}
 
@@ -51,13 +70,9 @@ grafica_BoxPlot(
 
 \item{y_position}{Position of y axis, ie. ("right","left)}
 
-\item{formato_fecha}{date format}
-
 \item{titulo}{Title to graph, as character}
 
 \item{subtitulo}{Subtitle to graph, as character}
-
-\item{break_x}{x axis partitions}
 
 \item{t_hjust}{Title position, values between [0,1]}
 
@@ -70,6 +85,54 @@ grafica_BoxPlot(
 \item{scales_fw}{scales of the variables graphed}
 
 \item{bigotes}{T}
+
+\item{prom}{If average = T, then the average of the data is calculated}
+
+\item{size_t}{title font size}
+
+\item{size_s}{subtitle font size}
+
+\item{size_x_t}{x-axis title font size}
+
+\item{size_y_t}{y-axis title font size}
+
+\item{size_l}{legend title font size}
+
+\item{size_lt}{legend text font size}
+
+\item{size_x_axis}{x-axis text font size}
+
+\item{size_y_axis}{x-axis text font size}
+
+\item{font_t}{title font style}
+
+\item{font_s}{subtitle font style}
+
+\item{font_l}{legend font style}
+
+\item{font_x}{x-axis font style}
+
+\item{font_y}{y-axis font style}
+
+\item{font_lt}{legend text font style}
+
+\item{col_t}{title color}
+
+\item{col_s}{subtitle color}
+
+\item{angle_x}{angle of x-axis text}
+
+\item{angle_y}{angle of y-axis text}
+
+\item{x_axis_tf}{title bold,plain, etc}
+
+\item{y_axis_tf}{subtitle bold,plain, etc}
+
+\item{x_axis_f}{bold,plain, etc}
+
+\item{y_axis_f}{bold,plain, etc}
+
+\item{box_alpha}{boxPlot opacity}
 }
 \value{
 BoxPlot with Banxico format
